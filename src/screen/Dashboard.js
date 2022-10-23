@@ -19,7 +19,7 @@ const Dashboard = () => {
           style={{
             flexDirection: 'row',
             alignItems: 'center',
-            marginTop: 40,
+            marginTop: 20,
             marginLeft: 12,
           }}>
           <Image
@@ -58,121 +58,122 @@ const Dashboard = () => {
             </Text>
           </TouchableOpacity>
         </View>
-        <View style={styles.wrapper}>
+      </View>
+      <ScrollView>
+        <View style={{height: 200}}>
           <Swiper
             showsButtons={false}
             autoplay={true}
+            autoplayTimeout={3.5}
             dotColor={'#C2CDDB'}
             activeDotColor={'#FDCB5A'}>
             <Image
-              source={require('../../src/asset/image4.png')}
+              source={require('../asset/image4.png')}
               style={styles.slide}
             />
             <Image
-              source={require('../../src/asset/image4.png')}
+              source={require('../asset/imagee5.jpg')}
               resizeMode="stretch"
               style={styles.slide}
             />
             <Image
-              source={require('../../src/asset/image4.png')}
+              source={require('../asset/imagee6.jpg')}
               resizeMode="stretch"
               style={styles.slide}
             />
             <Image
-              source={require('../../src/asset/image4.png')}
+              source={require('../asset/imagee7.jpg')}
               resizeMode="stretch"
               style={styles.slide}
             />
           </Swiper>
         </View>
-      </View>
-
-      <View
-        style={{
-          width: 300,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginTop: 20,
-          alignSelf: 'center',
-        }}>
-        <TouchableOpacity>
-          <Image
-            style={styles.status}
-            source={require('../asset/Ellipse9.png')}
-          />
-          <Text style={styles.statText}>Kucing</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            style={styles.status}
-            source={require('../asset/Ellipse9.png')}
-          />
-          <Text style={styles.statText}>Anjing</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            style={styles.status}
-            source={require('../asset/Ellipse9.png')}
-          />
-          <Text style={styles.statText}>Hamster</Text>
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <Image
-            style={styles.status}
-            source={require('../asset/Ellipse9.png')}
-          />
-          <Text style={styles.statText}>Kelinci</Text>
-        </TouchableOpacity>
-      </View>
-      <View
-        style={{
-          marginTop: 40,
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          marginHorizontal: 25,
-        }}>
-        <Text style={styles.statText2}>Konsultasi Klinik</Text>
-        <TouchableOpacity>
-          <Text style={styles.statText1}>Lihat Lainnya {'>>'}</Text>
-        </TouchableOpacity>
-      </View>
-      <ScrollView
-        horizontal={true}
-        showsHorizontalScrollIndicator={false}
-        style={{
-          margin: 20,
-          marginBottom: -20,
-          marginTop: 10,
-        }}>
         <View
           style={{
+            width: 300,
             flexDirection: 'row',
             justifyContent: 'space-between',
-            marginBottom: 150,
-            top: 60,
-            // margin:20,
-            height: 250,
+            marginTop: 20,
+            alignSelf: 'center',
+          }}>
+          <TouchableOpacity>
+            <Image
+              style={styles.status}
+              source={require('../asset/fxemoji_cat.png')}
+            />
+            <Text style={styles.statText}>Kucing</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              style={styles.status}
+              source={require('../asset/Pdog.png')}
+            />
+            <Text style={styles.statText}>Anjing</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              style={styles.status}
+              source={require('../asset/noto_hamster.png')}
+            />
+            <Text style={styles.statText}>Hamster</Text>
+          </TouchableOpacity>
+          <TouchableOpacity>
+            <Image
+              style={styles.status}
+              source={require('../asset/twemoji_rabbit-face.png')}
+            />
+            <Text style={styles.statText}>Kelinci</Text>
+          </TouchableOpacity>
+        </View>
+        <View
+          style={{
+            marginTop: 40,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            marginHorizontal: 25,
+          }}>
+          <Text style={styles.statText2}>Konsultasi Klinik</Text>
+          <TouchableOpacity>
+            <Text style={styles.statText1}>Lihat Lainnya {'>>'}</Text>
+          </TouchableOpacity>
+        </View>
+        <ScrollView
+          horizontal={true}
+          showsHorizontalScrollIndicator={false}
+          style={{
+            margin: 20,
+            marginBottom: -20,
             marginTop: 10,
           }}>
-          <TouchableOpacity style={styles.button1}>
-            <Text style={styles.Textbutton}>All</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.Textbutton}>Batam</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.Textbutton}>Jakarta</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.Textbutton}>Bandung</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
-            <Text style={styles.Textbutton}>Padang</Text>
-          </TouchableOpacity>
-        </View>
-      </ScrollView>
-      <ScrollView>
-        <View style={[styles.card, {marginTop: -60}]}>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginBottom: 150,
+              top: 60,
+              // margin:20,
+              height: 250,
+              marginTop: 10,
+            }}>
+            <TouchableOpacity style={styles.button1}>
+              <Text style={styles.Textbutton}>All</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.Textbutton}>Batam</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.Textbutton}>Jakarta</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.Textbutton}>Bandung</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button}>
+              <Text style={styles.Textbutton}>Padang</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
+        {/* <ScrollView> */}
+        <View style={[styles.card, {marginTop: -350}]}>
           <Image
             style={styles.gambar}
             source={require('../asset/image4.png')}
@@ -228,7 +229,7 @@ const Dashboard = () => {
         <View style={styles.card}>
           <Image
             style={styles.gambar}
-            source={require('../asset/image4.png')}
+            source={require('../asset/imagee5.jpg')}
           />
           <View>
             <Text
@@ -238,7 +239,7 @@ const Dashboard = () => {
                 fontSize: 15,
                 color: '#875C25',
               }}>
-              Batam
+              Jakarta
             </Text>
             <Text
               style={{
@@ -281,7 +282,7 @@ const Dashboard = () => {
         <View style={styles.card}>
           <Image
             style={styles.gambar}
-            source={require('../asset/image4.png')}
+            source={require('../asset/imagee6.jpg')}
           />
           <View>
             <Text
@@ -291,7 +292,7 @@ const Dashboard = () => {
                 fontSize: 15,
                 color: '#875C25',
               }}>
-              Batam
+              Bandung
             </Text>
             <Text
               style={{
@@ -334,7 +335,7 @@ const Dashboard = () => {
         <View style={styles.card}>
           <Image
             style={styles.gambar}
-            source={require('../asset/image4.png')}
+            source={require('../asset/imagee7.jpg')}
           />
           <View>
             <Text
@@ -344,7 +345,7 @@ const Dashboard = () => {
                 fontSize: 15,
                 color: '#875C25',
               }}>
-              Batam
+              Padang
             </Text>
             <Text
               style={{
@@ -387,7 +388,7 @@ const Dashboard = () => {
         <View style={styles.card}>
           <Image
             style={styles.gambar}
-            source={require('../asset/image4.png')}
+            source={require('../asset/imagee8.jpg')}
           />
           <View>
             <Text
@@ -397,7 +398,7 @@ const Dashboard = () => {
                 fontSize: 15,
                 color: '#875C25',
               }}>
-              Batam
+              Tanjung Pinang
             </Text>
             <Text
               style={{
@@ -440,7 +441,7 @@ const Dashboard = () => {
         <View style={styles.card}>
           <Image
             style={styles.gambar}
-            source={require('../asset/image4.png')}
+            source={require('../asset/imagee9.jpg')}
           />
           <View>
             <Text
@@ -450,7 +451,7 @@ const Dashboard = () => {
                 fontSize: 15,
                 color: '#875C25',
               }}>
-              Batam
+              Anambas
             </Text>
             <Text
               style={{
@@ -576,7 +577,7 @@ const styles = StyleSheet.create({
     marginTop: -80,
   },
   statText2: {
-    fontSize: 20,
+    fontSize: 15,
     color: '#1A3150',
     fontWeight: 'bold',
     textAlign: 'center',
@@ -587,28 +588,16 @@ const styles = StyleSheet.create({
   Swiper: {
     width: 40,
     height: 80,
-    top: -40,
+    top: 400,
     alignSelf: 'center',
     position: 'relative',
-    marginTop: 100,
-  },
-  wiper: {
-    width: 400,
-    height: 180,
-    top: -40,
-    marginTop: 150,
-    marginBottom: -600,
-    alignSelf: 'center',
-    position: 'relative',
-  },
-  wrapper: {
-    height: 280,
+    marginTop: 300,
   },
   slide: {
     position: 'absolute',
-    height: 130,
+    height: 110,
     width: 300,
-    top: 100,
+    top: 40,
     left: 50,
     borderRadius: 5,
   },
