@@ -25,6 +25,31 @@ const Searchbar = () => {
       }}onPress={()=> navigation.goBack()}>Sebelumnya</Text>
       </TouchableOpacity>
       </View>
+
+      <View style={{flexDirection:'row'}}>
+      <Icon1 style={{start:15, top:12}} name='location-pin' color={'#875C25'} size={27}/>
+      <Text
+      style={{
+        color: '#000',
+        fontSize: 16,
+        marginHorizontal: 120,
+        fontWeight: 'bold',
+        marginLeft: 18,
+        marginStart: 100,
+        fontFamily: 'Roboto',
+        top: 12,
+        fontStyle: 'normal'}}>Jalan Sriwijaya Kabil Batam </Text>
+        <Icon style={{right:35, top:10}} name='pencil' color={'#A7A7A7'} size={27}/>
+      </View>
+
+      <View
+  style={{
+    borderBottomColor: 'black',
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    top:20
+  }}
+/>
+
       <View style={styles.search}>
       <TextInput
         style={{
@@ -75,7 +100,7 @@ const Searchbar = () => {
         Buka: 09.00 - 20.00 </Text>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.textbutton}
-          onPress={()=> navigation.navigate('DetailPageScreen')}>Book Now</Text>
+          onPress={()=> navigation.navigate('Submit')}>Book Now</Text>
            </TouchableOpacity>
       </View>
       
@@ -245,7 +270,7 @@ const Searchbar = () => {
     borderRadius: 1,
     elevation: 2,
     top:40,
-    marginBottom: 30,
+    marginBottom: 25,
   },
   banyak1:{
     flexDirection: 'row',

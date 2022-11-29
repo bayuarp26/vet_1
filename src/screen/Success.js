@@ -2,8 +2,11 @@ import { View, Text, StyleSheet, Image } from 'react-native'
 import React from 'react'
 import { Modal } from 'react-native'
 
-const successcreen = () => {
+const SuccesScreen = ({navigation}) => {
   return (
+    setTimeout(() => {
+      navigation.navigate('NotificationsScreen');
+    }, 3000),
     <View style={{flex: 1, backgroundColor: '#1E1E1E'}}>
       <Modal isVisible={true}>
         <View
@@ -27,4 +30,4 @@ const successcreen = () => {
   );
 }
 
-export default successcreen
+export default SuccesScreen

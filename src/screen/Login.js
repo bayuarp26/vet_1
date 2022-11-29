@@ -18,7 +18,7 @@ const Login = () => {
       <View
         style={{
           flexDirection: 'row',
-          ustifyContent: 'flex-start',
+          justifyContent: 'flex-start',
         }}>
         <Icon name="arrow-left" size={25} color="white" />
 
@@ -74,6 +74,7 @@ const Login = () => {
           placeholder="Enter your Password"
           placeholderTextColor="white"
         />
+        
         <MaterialCommunityIcons
           style={{
             position: 'absolute',
@@ -94,8 +95,12 @@ const Login = () => {
           }}>
           Forgot your password
         </Text>
-        <TouchableOpacity style={styles.button}>
-          <Text onPress={() => navigation.navigate('DashboardScreen')}
+        <TouchableOpacity style={styles.button} 
+        onPress={async () => {
+          await handleLogin ({ nip, password });
+        }}>
+          
+          <Text 
             style={styles.textlogin}> Submit
           </Text>
         </TouchableOpacity>
@@ -119,7 +124,21 @@ const Login = () => {
       </View>
     </View>
   );
-}
+} 
+    const handleLogin = {} => {
+      try {
+        const response = await axios.post('http://localhost:3000/login', {
+          nip : value.nip,
+          password : value.password,
+  });
+  if (response.data.status === 'success') {
+    navigation.navigate('DashboardScreen');
+  } else {
+    console.log('response', response.data);
+    // asyncStorage.setItem
+    wait ascyncStorage.setItem('password', value.password)
+  }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
