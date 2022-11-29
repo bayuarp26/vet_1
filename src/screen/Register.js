@@ -76,12 +76,12 @@ const Login = () => {
         top: 300}} 
         name="eye" size={20} color="white" />
     
-    <TouchableOpacity style={styles.button}>
+    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('LoginScreen')}>
     <Text  onPress={() => navigation.navigate('LoginScreen')}
     style={styles.textlogin}> Submit</Text>  
     </TouchableOpacity>
     <Text onPress={() => navigation.navigate('LoginScreen')}
-    style={styles.text}> Already have an account? Please Sign in
+    style={styles.text}> Already have an account? Please
             <Text style={{
                 fontWeight: 'bold',
                 fontFamily:"Roboto",
